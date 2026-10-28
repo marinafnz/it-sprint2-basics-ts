@@ -415,30 +415,31 @@ describe("Problema de blocs catch", () => {
 //  Pista: pots crear una interfície base i reutilitzar-la amb extends.
 // */
 
-// describe("Problema d'herència amb extends", () => {
-//   interface User {
-//     id: string;
-//     firstName: string;
-//     lastName: string;
-//   }
+describe("Problema d'herència amb extends", () => {
+  interface DNI {
+    id: string;
+  }
 
-//   interface Post {
-//     id: string;
-//     title: string;
-//     body: string;
-//   }
+  interface User extends DNI {
+    firstName: string;
+    lastName: string;
+  }
 
-//   interface Comment {
-//     id: string;
-//     comment: string;
-//   }
+  interface Post extends DNI{
+    title: string;
+    body: string;
+  }
 
-//   type tests = [
-//     Expect<Equal<User, { id: string; firstName: string; lastName: string }>>,
-//     Expect<Equal<Post, { id: string; title: string; body: string }>>,
-//     Expect<Equal<Comment, { id: string; comment: string }>>
-//   ];
-// });
+  interface Comment extends DNI{
+    comment: string;
+  }
+
+  type tests = [
+    Expect<Equal<User, { id: string; firstName: string; lastName: string }>>,
+    Expect<Equal<Post, { id: string; title: string; body: string }>>,
+    Expect<Equal<Comment, { id: string; comment: string }>>
+  ];
+});
 
 // /*
 // Repte 15:
