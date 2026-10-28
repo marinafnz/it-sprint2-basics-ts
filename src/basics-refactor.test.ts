@@ -389,21 +389,21 @@ describe("Problema de filtratge amb typeof", () => {
 // Pista: hi ha diverses maneres de resoldre aquest repte, prova diferents opcions!
 // */
 
-// describe("Problema de blocs catch", () => {
-//   const tryCatchDemo = (state: "fail" | "succeed") => {
-//     try {
-//       if (state === "fail") {
-//         throw new Error("Failure!");
-//       }
-//     } catch (e) {
-//       return e.message;
-//     }
-//   };
-
-//   it("Ha de retornar el missatge quan falla", () => {
-//     expect(tryCatchDemo("fail")).toEqual("Failure!");
-//   });
-// });
+describe("Problema de blocs catch", () => {
+  const tryCatchDemo = (state: "fail" | "succeed") => {
+    try {
+      if (state === "fail") {
+        throw new Error("Failure!");
+      }
+    } catch (e:any) {
+      return e.message;
+    }
+  };
+ 
+  it("Ha de retornar el missatge quan falla", () => {
+    expect(tryCatchDemo("fail")).toEqual("Failure!");
+  });
+});
 
 // /*
 // Repte 14:
