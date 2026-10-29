@@ -493,24 +493,24 @@ describe("Problema d'intersecció de tipus", () => {
 // Pista: revisa els Utility Types Pick i Omit.
 // */
 
-// describe("Problema d'Omit i Pick", () => {
-//   interface User {
-//     id: string;
-//     firstName: string;
-//     lastName: string;
-//   }
+describe("Problema d'Omit i Pick", () => {
+  interface User {
+    id: string;
+    firstName: string;
+    lastName: string;
+  }
 
-//   /**
-//    * Com creem un nou tipus d'objecte amb NOMÉS les propietats
-//    * firstName i lastName de User?
-//    */
+  /**
+   * Com creem un nou tipus d'objecte amb NOMÉS les propietats
+   * firstName i lastName de User?
+   */
+ 
+  type MyType = Pick<User, 'firstName' | 'lastName'>;
 
-//   type MyType = unknown;
+  type tests = [Expect<Equal<MyType, { firstName: string; lastName: string }>>];
+});
 
-//   type tests = [Expect<Equal<MyType, { firstName: string; lastName: string }>>];
-// });
-
-// /*
+/*
 // Repte 17:
 // La funció 'onFocusChange' is actualment 'unknown'. Visita la documentació de TypeScript i esbrina el tipus apropiat per la funció.
 // */
